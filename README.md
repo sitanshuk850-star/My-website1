@@ -1,193 +1,377 @@
+<html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>SANDEEP SINGH | Official 
-website</title> 
-    <title>Sitanshu Maurya | Official Website</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Join Our Team</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Segoe UI', sans-serif; }
+  body {
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    min-height: 100vh;
+    padding: 30px 15px;
+  }
+  .container { max-width: 750px; margin: 0 auto; }
 
-    <meta name="description"
-    content="SITANSHU MAURYA 
-             SANDEEP SINGH की official website.">
+  .header { text-align: center; color: white; margin-bottom: 25px; }
+  .header h1 { font-size: 28px; margin-bottom: 8px; }
+  .header p { opacity: 0.9; font-size: 14px; }
 
-    <meta name="robots" content="index, follow">
+  .tabs { display: flex; gap: 10px; margin-bottom: 20px; }
+  .tab {
+    flex: 1; padding: 14px;
+    background: rgba(255,255,255,0.2);
+    color: white; border: none;
+    border-radius: 12px; font-size: 15px;
+    cursor: pointer; font-weight: 600; transition: 0.3s;
+  }
+  .tab.active { background: white; color: #667eea; }
+
+  .card {
+    background: white;
+    border-radius: 20px;
+    padding: 30px;
+    box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+  }
+  .section { display: none; }
+  .section.active { display: block; animation: fadeIn 0.4s; }
+  @keyframes fadeIn { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
+
+  .card h2 { color: #333; margin-bottom: 20px; font-size: 20px; }
+
+  label { display: block; color: #555; margin-bottom: 6px; font-size: 14px; font-weight: 600; }
+  input, select {
+    width: 100%; padding: 12px;
+    border: 2px solid #e0e0e0;
+    border-radius: 10px; font-size: 15px;
+    margin-bottom: 15px; outline: none;
+    transition: 0.3s; background: white;
+  }
+  input:focus, select:focus { border-color: #667eea; }
+
+  .row { display: grid; grid-template-columns: 1fr 1fr; gap: 15px; }
+  @media (max-width: 500px) { .row { grid-template-columns: 1fr; } }
+
+  .consent-box {
+    background: #fff8e1;
+    border-left: 4px solid #ffc107;
+    padding: 15px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+  }
+  .consent-box label {
+    display: flex; align-items: flex-start; gap: 10px;
+    color: #555; font-weight: 500; cursor: pointer; font-size: 13px;
+    margin: 0;
+  }
+  .consent-box input[type="checkbox"] {
+    width: auto; margin: 3px 0 0 0;
+    transform: scale(1.3); cursor: pointer;
+  }
+
+  .btn {
+    width: 100%; padding: 14px;
+    background: #667eea; color: white;
+    border: none; border-radius: 10px;
+    font-size: 16px; font-weight: 600;
+    cursor: pointer; transition: 0.3s;
+  }
+  .btn:hover { background: #5568d3; }
+  .btn-danger { background: #e74c3c; }
+  .btn-danger:hover { background: #c0392b; }
+
+  .search-box { display: flex; gap: 10px; margin-bottom: 20px; }
+  .search-box input { margin-bottom: 0; }
+  .search-box button {
+    padding: 12px 24px; background: #667eea; color: white;
+    border: none; border-radius: 10px; cursor: pointer; font-weight: 600;
+  }
+
+  .person-card {
+    background: #f8f9ff;
+    border-left: 4px solid #667eea;
+    padding: 18px;
+    border-radius: 10px;
+    margin-bottom: 12px;
+    animation: fadeIn 0.3s;
+    position: relative;
+  }
+  .person-card h3 { color: #333; margin-bottom: 10px; font-size: 17px; }
+  .person-card p { color: #555; font-size: 14px; margin: 5px 0; }
+  .person-card p strong { color: #333; }
+  .delete-btn {
+    position: absolute; top: 12px; right: 12px;
+    background: #e74c3c; color: white; border: none;
+    padding: 6px 12px; border-radius: 6px;
+    cursor: pointer; font-size: 12px;
+  }
+
+  .msg {
+    padding: 12px; border-radius: 10px;
+    margin-top: 15px; font-size: 14px;
+    display: none; text-align: center; font-weight: 600;
+  }
+  .msg.success { background: #d4edda; color: #155724; display: block; }
+  .msg.error { background: #f8d7da; color: #721c24; display: block; }
+
+  .empty { text-align: center; color: #888; padding: 30px; font-size: 14px; }
+  .stats {
+    background: #f0f4ff; padding: 15px;
+    border-radius: 10px; margin-bottom: 20px;
+    text-align: center; color: #667eea;
+    font-weight: 600; font-size: 15px;
+  }
+  .export-btn {
+    background: #28a745; color: white;
+    padding: 10px 20px; border: none;
+    border-radius: 8px; cursor: pointer;
+    font-weight: 600; margin-bottom: 15px;
+  }
+</style>
 </head>
-<html lang="hi" class="scroll-smooth">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Richind with SANDEEP SIR - Official Website</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600;700;800&display=swap" rel="stylesheet">
-    <style>
-        body { font-family: 'Plus Jakarta Sans', sans-serif; }
-        .accent-bg { background-color: #4f46e5; }
-        .accent-text { color: #4f46e5; }
-        .accent-border { border-color: #4f46e5; }
-    </style>
-</head>
-<body class="bg-slate-900 text-slate-100 antialiased selection:bg-indigo-500 selection:text-white">
+<body>
+  <div class="container">
+    <div class="header">
+      <h1>🚀 Join Our Team</h1>
+      <p>Fill the form and we'll contact you soon</p>
+    </div>
 
-    <!-- Header Navigation -->
-    <nav class="fixed top-0 left-0 right-0 z-50 bg-slate-900/80 backdrop-blur-md border-b border-slate-800">
-        <div class="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
-            <a href="#" class="text-xl font-extrabold tracking-tight text-white flex items-center gap-2">
-                <span class="w-3 h-3 rounded-full accent-bg inline-block"></span>
-                Richind with SITANSHU 
-            </a>
-            <div class="hidden md:flex items-center space-x-8 text-sm font-medium text-slate-300">
-                <a href="#hero" class="hover:text-white transition">Home</a>
-                <a href="#services" class="hover:text-white transition">Services</a>
-                <a href="#projects" class="hover:text-white transition">Highlights</a>
-                <a href="#contact" class="hover:text-white transition">Contact</a>
-            </div>
-            <a href="#contact" class="px-5 py-2.5 rounded-full text-xs font-bold text-white accent-bg hover:opacity-90 transition shadow-lg">
-                Get Started
-            </a>
-        </div>
-    </nav>
+    <div class="tabs">
+      <button class="tab active" onclick="showTab('join')">📝 Join Form</button>
+      <button class="tab" onclick="showTab('admin')">🔐 Admin</button>
+    </div>
 
-    <!-- Hero Section -->
-    <section id="hero" class="pt-36 pb-20 px-6 max-w-6xl mx-auto flex flex-col items-center text-center">
-        <span class="px-4 py-1.5 rounded-full text-xs font-semibold text-white/90 bg-slate-800 border border-slate-700 mb-6 flex items-center gap-2">
-            <span class="w-2 h-2 rounded-full accent-bg"></span> Welcome to Richind with SITANSHU 
-        </span>
-        <h1 class="text-4xl sm:text-6xl font-extrabold text-white tracking-tight max-w-4xl leading-tight mb-6">
-            online work at home 
-        </h1>
-        <p class="text-slate-400 text-base sm:text-lg max-w-2xl mb-10 leading-relaxed">
-            Hum small aur medium businesses ko digital growth, marketing aur high-converting web solutions provide karte hain.
-        </p>
-        <div class="flex flex-col sm:flex-row items-center gap-4">
-            <a href="#contact" class="px-8 py-4 rounded-xl font-bold text-sm text-white accent-bg hover:opacity-90 transition shadow-xl w-full sm:w-auto">
-                Online work  <i class="fa-solid fa-arrow-right ml-2"></i>
-            </a>
-            <a href="#services" class="px-8 py-4 rounded-xl font-bold text-sm text-slate-300 bg-slate-800 border border-slate-700 hover:bg-slate-700 transition w-full sm:w-auto">
-                Aur Jaanein
-            </a>
-        </div>
-    </section>
+    <div class="card">
+      <!-- JOIN FORM -->
+      <div class="section active" id="joinSection">
+        <h2>Apni details bharein</h2>
 
-    
-    <!-- Services / Features Section -->
-    <section id="services" class="py-20 px-6 max-w-6xl mx-auto border-t border-slate-800">
-        <div class="text-center max-w-xl mx-auto mb-16">
-            <h2 class="text-3xl font-extrabold text-white mb-3">Aapko Kya Milega</h2>
-            <p class="text-slate-400 text-sm">Hamari best-in-class features aur services jo aapko success ki taraf le jaati hain.</p>
-        </div>
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-            
-                <div class="bg-slate-800/60 border border-slate-700/80 p-8 rounded-2xl hover:border-slate-500 transition group">
-                    <div class="w-12 h-12 rounded-xl accent-bg flex items-center justify-center text-white text-xl mb-6 shadow-lg group-hover:scale-110 transition">
-                        <i class="fa-solid fa-chart-line"></i>
-                    </div>
-                    <h3 class="text-xl font-bold text-white mb-2">Digital Strategy</h3>
-                    <p class="text-slate-400 text-sm leading-relaxed">Data-driven marketing strategies for scalable growth.</p>
-                </div>
-            
-                <div class="bg-slate-800/60 border border-slate-700/80 p-8 rounded-2xl hover:border-slate-500 transition group">
-                    <div class="w-12 h-12 rounded-xl accent-bg flex items-center justify-center text-white text-xl mb-6 shadow-lg group-hover:scale-110 transition">
-                        <i class="fa-solid fa-cubes"></i>
-                    </div>
-                    <h3 class="text-xl font-bold text-white mb-2">Custom Software</h3>
-                    <p class="text-slate-400 text-sm leading-relaxed">Tailor-made software tailored to streamline operations.</p>
-                </div>
-            
-                <div class="bg-slate-800/60 border border-slate-700/80 p-8 rounded-2xl hover:border-slate-500 transition group">
-                    <div class="w-12 h-12 rounded-xl accent-bg flex items-center justify-center text-white text-xl mb-6 shadow-lg group-hover:scale-110 transition">
-                        <i class="fa-solid fa-cloud"></i>
-                    </div>
-                    <h3 class="text-xl font-bold text-white mb-2">Cloud Integration</h3>
-                    <p class="text-slate-400 text-sm leading-relaxed">Secure cloud migration and infrastructure management.</p>
-                </div>
-            
-        </div>
-    </section>
-    
+        <label>Full Name *</label>
+        <input type="text" id="jName" placeholder="Aapka pura naam">
 
-    
-    <!-- Projects / Works Section -->
-    <section id="projects" class="py-20 px-6 max-w-6xl mx-auto border-t border-slate-800">
-        <div class="text-center max-w-xl mx-auto mb-16">
-            <h2 class="text-3xl font-extrabold text-white mb-3">Our Work & Showcase</h2>
-            <p class="text-slate-400 text-sm">Hamare recent projects aur top highlights dekhein.</p>
+        <div class="row">
+          <div>
+            <label>Age *</label>
+            <input type="number" id="jAge" placeholder="Aapki age" min="15" max="100">
+          </div>
+          <div>
+            <label>State *</label>
+            <select id="jState">
+              <option value="">Select State</option>
+              <option>Andhra Pradesh</option>
+              <option>Assam</option>
+              <option>Bihar</option>
+              <option>Chhattisgarh</option>
+              <option>Delhi</option>
+              <option>Goa</option>
+              <option>Gujarat</option>
+              <option>Haryana</option>
+              <option>Himachal Pradesh</option>
+              <option>Jharkhand</option>
+              <option>Karnataka</option>
+              <option>Kerala</option>
+              <option>Madhya Pradesh</option>
+              <option>Maharashtra</option>
+              <option>Odisha</option>
+              <option>Punjab</option>
+              <option>Rajasthan</option>
+              <option>Tamil Nadu</option>
+              <option>Telangana</option>
+              <option>Uttar Pradesh</option>
+              <option>Uttarakhand</option>
+              <option>West Bengal</option>
+              <option>Other</option>
+            </select>
+          </div>
         </div>
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-            
-                <div class="bg-slate-800 border border-slate-700/70 rounded-2xl overflow-hidden hover:shadow-2xl transition">
-                    <div class="h-48 overflow-hidden relative">
-                        <img src="https://images.unsplash.com/photo-1559526324-4b87b5e36e44?auto=format&fit=crop&w=500&q=80" alt="Fintech Mobile Application" class="w-full h-full object-cover hover:scale-105 transition duration-500">
-                        <span class="absolute top-3 right-3 bg-slate-900/80 backdrop-blur px-3 py-1 rounded-full text-[10px] font-bold text-white border border-slate-700">Finance</span>
-                    </div>
-                    <div class="p-6">
-                        <h4 class="font-bold text-lg text-white mb-1">Fintech Mobile Application</h4>
-                        <p class="text-slate-400 text-xs mb-4">High quality design and execution created for modern experience.</p>
-                        <a href="#" class="text-xs font-bold accent-text hover:underline flex items-center gap-1">
-                            Explore Details <i class="fa-solid fa-chevron-right text-[10px]"></i>
-                        </a>
-                    </div>
-                </div>
-            
-                <div class="bg-slate-800 border border-slate-700/70 rounded-2xl overflow-hidden hover:shadow-2xl transition">
-                    <div class="h-48 overflow-hidden relative">
-                        <img src="https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?auto=format&fit=crop&w=500&q=80" alt="Logistics ERP System" class="w-full h-full object-cover hover:scale-105 transition duration-500">
-                        <span class="absolute top-3 right-3 bg-slate-900/80 backdrop-blur px-3 py-1 rounded-full text-[10px] font-bold text-white border border-slate-700">Enterprise</span>
-                    </div>
-                    <div class="p-6">
-                        <h4 class="font-bold text-lg text-white mb-1">Logistics ERP System</h4>
-                        <p class="text-slate-400 text-xs mb-4">High quality design and execution created for modern experience.</p>
-                        <a href="#" class="text-xs font-bold accent-text hover:underline flex items-center gap-1">
-                            Explore Details <i class="fa-solid fa-chevron-right text-[10px]"></i>
-                        </a>
-                    </div>
-                </div>
-            
-                <div class="bg-slate-800 border border-slate-700/70 rounded-2xl overflow-hidden hover:shadow-2xl transition">
-                    <div class="h-48 overflow-hidden relative">
-                        <img src="https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=500&q=80" alt="Corporate Portal" class="w-full h-full object-cover hover:scale-105 transition duration-500">
-                        <span class="absolute top-3 right-3 bg-slate-900/80 backdrop-blur px-3 py-1 rounded-full text-[10px] font-bold text-white border border-slate-700">Web Portal</span>
-                    </div>
-                    <div class="p-6">
-                        <h4 class="font-bold text-lg text-white mb-1">Corporate Portal</h4>
-                        <p class="text-slate-400 text-xs mb-4">High quality design and execution created for modern experience.</p>
-                        <a href="#" class="text-xs font-bold accent-text hover:underline flex items-center gap-1">
-                            Explore Details <i class="fa-solid fa-chevron-right text-[10px]"></i>
-                        </a>
-                    </div>
-                </div>
-            
+
+        <label>WhatsApp Number *</label>
+        <input type="tel" id="jWhatsapp" placeholder="+91 XXXXX XXXXX">
+
+        <label>Email *</label>
+        <input type="email" id="jEmail" placeholder="aapka@email.com">
+
+        <div class="consent-box">
+          <label>
+            <input type="checkbox" id="jConsent">
+            <span>Main <strong>consent deta/deti hoon</strong> ki meri ye information team join karne ke liye use ki jaye. Main jaanta hoon ki meri info safe rahegi aur kisi ke saath share nahi hogi.</span>
+          </label>
         </div>
-    </section>
-    
 
-    
-    <!-- Contact Section -->
-    <section id="contact" class="py-20 px-6 max-w-4xl mx-auto border-t border-slate-800">
-        <div class="bg-gradient-to-br from-slate-800 to-slate-900 border border-slate-700/80 rounded-3xl p-8 sm:p-12 shadow-2xl">
-            <div class="text-center max-w-md mx-auto mb-10">
-                <h2 class="text-3xl font-extrabold text-white mb-2">Humse Sampark Karein</h2>
-                <p class="text-slate-400 text-sm">Kuch poochna hai ya project start karna hai? Message bhejein!</p>
-            </div>
-            <form onsubmit="event.preventDefault(); document.getElementById('msg-box').classList.remove('hidden');" class="space-y-4">
-                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                    <input type="text" placeholder="Aapka Naam" required class="bg-slate-900 border border-slate-700 rounded-xl px-4 py-3 text-sm text-white focus:outline-none focus:border-indigo-500">
-                    <input type="email" placeholder="Aapka Email" required class="bg-slate-900 border border-slate-700 rounded-xl px-4 py-3 text-sm text-white focus:outline-none focus:border-indigo-500">
-                </div>
-                <textarea rows="4" placeholder="Aapka Sandesh (Message)" required class="w-full bg-slate-900 border border-slate-700 rounded-xl px-4 py-3 text-sm text-white focus:outline-none focus:border-indigo-500"></textarea>
-                <button type="submit" class="w-full py-4 rounded-xl font-bold text-sm text-white accent-bg hover:opacity-90 transition shadow-lg">
-                    Send Message <i class="fa-solid fa-paper-plane ml-2"></i>
-                </button>
-            </form>
-            <div id="msg-box" class="hidden mt-4 p-4 rounded-xl bg-emerald-500/20 border border-emerald-500/40 text-emerald-300 text-xs text-center font-semibold">
-                 Shukriya! Aapka message bhej diya gaya hai. Hum jald hi sitanshuk851@gmail.com par reply karenge.
-            </div>
+        <button class="btn" onclick="submitJoin()">Join Karein</button>
+        <div class="msg" id="joinMsg"></div>
+      </div>
+
+      <!-- ADMIN PANEL -->
+      <div class="section" id="adminSection">
+        <div id="adminLogin">
+          <h2>🔐 Admin Login</h2>
+          <label>Password</label>
+          <input type="password" id="adminPass" placeholder="Password daalein">
+          <button class="btn" onclick="adminLogin()">Login</button>
+          <div class="msg" id="loginMsg"></div>
+          <p style="font-size:12px;color:#888;margin-top:15px;text-align:center;">Default password: <strong>admin123</strong> (ise change karna!)</p>
         </div>
-    </section>
-    
 
-    <!-- Footer -->
-    <footer class="py-8 border-t border-slate-800 text-center text-xs text-slate-500">
-        <p>© 2026 Richind with SITANSHU . Sabhi adhikar surakshit hain.</p>
-    </footer>
+        <div id="adminPanel" style="display:none;">
+          <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:15px;">
+            <h2 style="margin:0;">👥 Joiners List</h2>
+            <button class="delete-btn" style="position:static;" onclick="logout()">Logout</button>
+          </div>
 
+          <div class="stats" id="stats">Total: 0 Joiners</div>
+
+          <button class="export-btn" onclick="exportCSV()">📥 Export CSV</button>
+
+          <div class="search-box">
+            <input type="text" id="adminSearch" placeholder="Naam ya state se dhundein...">
+            <button onclick="renderList()">Search</button>
+          </div>
+
+          <div id="peopleList"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+<script>
+  const ADMIN_PASSWORD = "admin123"; // ← ise change karo!
+
+  function getPeople() {
+    return JSON.parse(localStorage.getItem('joiners') || '[]');
+  }
+  function savePeople(p) {
+    localStorage.setItem('joiners', JSON.stringify(p));
+  }
+
+  function showTab(name) {
+    document.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
+    document.querySelectorAll('.section').forEach(s => s.classList.remove('active'));
+    if (name === 'join') {
+      document.querySelectorAll('.tab')[0].classList.add('active');
+      document.getElementById('joinSection').classList.add('active');
+    } else {
+      document.querySelectorAll('.tab')[1].classList.add('active');
+      document.getElementById('adminSection').classList.add('active');
+    }
+  }
+
+  function submitJoin() {
+    const name = document.getElementById('jName').value.trim();
+    const age = document.getElementById('jAge').value.trim();
+    const state = document.getElementById('jState').value;
+    const whatsapp = document.getElementById('jWhatsapp').value.trim();
+    const email = document.getElementById('jEmail').value.trim();
+    const consent = document.getElementById('jConsent').checked;
+    const msg = document.getElementById('joinMsg');
+
+    if (!name || !age || !state || !whatsapp || !email) {
+      msg.className = 'msg error';
+      msg.textContent = '❌ Saari details bharna zaroori hai';
+      return;
+    }
+    if (!consent) {
+      msg.className = 'msg error';
+      msg.textContent = '❌ Consent dena zaroori hai';
+      return;
+    }
+    if (age < 15 || age > 100) {
+      msg.className = 'msg error';
+      msg.textContent = '❌ Age 15 se 100 ke beech honi chahiye';
+      return;
+    }
+
+    const people = getPeople();
+    people.push({
+      id: Date.now(),
+      name, age, state, whatsapp, email,
+      date: new Date().toLocaleString()
+    });
+    savePeople(people);
+
+    msg.className = 'msg success';
+    msg.textContent = '✅ Thank you! Aapki details mil gayi. Hum jaldi contact karenge.';
+
+    document.getElementById('jName').value = '';
+    document.getElementById('jAge').value = '';
+    document.getElementById('jState').value = '';
+    document.getElementById('jWhatsapp').value = '';
+    document.getElementById('jEmail').value = '';
+    document.getElementById('jConsent').checked = false;
+  }
+
+  function adminLogin() {
+    const pass = document.getElementById('adminPass').value;
+    const msg = document.getElementById('loginMsg');
+    if (pass === ADMIN_PASSWORD) {
+      document.getElementById('adminLogin').style.display = 'none';
+      document.getElementById('adminPanel').style.display = 'block';
+      renderList();
+    } else {
+      msg.className = 'msg error';
+      msg.textContent = '❌ Galat password';
+    }
+  }
+
+  function logout() {
+    document.getElementById('adminLogin').style.display = 'block';
+    document.getElementById('adminPanel').style.display = 'none';
+    document.getElementById('adminPass').value = '';
+    document.getElementById('loginMsg').className = 'msg';
+  }
+
+  function renderList() {
+    const query = (document.getElementById('adminSearch')?.value || '').toLowerCase();
+    const people = getPeople();
+    const filtered = people.filter(p =>
+      p.name.toLowerCase().includes(query) ||
+      p.state.toLowerCase().includes(query)
+    );
+
+    document.getElementById('stats').textContent = `Total: ${people.length} Joiners`;
+
+    const list = document.getElementById('peopleList');
+    if (filtered.length === 0) {
+      list.innerHTML = '<p class="empty">Koi joiner nahi mila</p>';
+      return;
+    }
+
+    list.innerHTML = filtered.map(p => `
+      <div class="person-card">
+        <button class="delete-btn" onclick="deletePerson(${p.id})">🗑 Delete</button>
+        <h3>👤 ${p.name}</h3>
+        <p><strong>Age:</strong> ${p.age}</p>
+        <p><strong>State:</strong> ${p.state}</p>
+        <p><strong>WhatsApp:</strong> <a href="https://wa.me/${p.whatsapp.replace(/\D/g,'')}" target="_blank">${p.whatsapp}</a></p>
+        <p><strong>Email:</strong> ${p.email}</p>
+        <p style="font-size:12px;color:#888;margin-top:8px;">📅 ${p.date}</p>
+      </div>
+    `).join('');
+  }
+
+  function deletePerson(id) {
+    if (!confirm('Pakka delete karna hai?')) return;
+    const people = getPeople().filter(p => p.id !== id);
+    savePeople(people);
+    renderList();
+  }
+
+  function exportCSV() {
+    const people = getPeople();
+    if (people.length === 0) { alert('Koi data nahi hai'); return; }
+    const headers = ['Name', 'Age', 'State', 'WhatsApp', 'Email', 'Date'];
+    const rows = people.map(p => [p.name, p.age, p.state, p.whatsapp, p.email, p.date]);
+    const csv = [headers, ...rows].map(r => r.map(c => `"${c}"`).join(',')).join('\n');
+    const blob = new Blob([csv], { type: 'text/csv' });
+    const url = URL.createObjectURL(blob);
+    const a = document.createElement('a');
+    a.href = url;
+    a.download = 'joiners.csv';
+    a.click();
+  }
+
+  document.getElementById('adminSearch')?.addEventListener('keypress', e => {
+    if (e.key === 'Enter') renderList();
+  });
+</script>
 </body>
 </html>
