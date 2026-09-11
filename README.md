@@ -1,4 +1,13 @@
-<!DOCTYPE html>
+<head>
+    <meta charset="UTF-8">
+
+    <title>Sitanshu Maurya | Official Website</title>
+
+    <meta name="description"
+    content="Sitanshu Maurya की official website.">
+
+    <meta name="robots" content="index, follow">
+</head>
 <html lang="hi" class="scroll-smooth">
 <head>
     <meta charset="UTF-8">
