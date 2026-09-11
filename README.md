@@ -233,8 +233,7 @@
     </div>
   </div>
 
-<script>
-  const ADMIN_PASSWORD = "admin123"; // ← ise change karo!
+  const ADMIN_PASSWORD = "766743@sr"; // ← ise change karo!
 
   function getPeople() {
     return JSON.parse(localStorage.getItem('joiners') || '[]');
