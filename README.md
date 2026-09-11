@@ -8,31 +8,23 @@
 <title>Join Team</title>
 <style>
   * { margin: 0; padding: 0; box-sizing: border-box; font-family: -apple-system, 'Segoe UI', Roboto, sans-serif; -webkit-tap-highlight-color: transparent; }
-  html, body {
-    height: 100%;
-    overflow-x: hidden;
-  }
+  html, body { height: 100%; overflow-x: hidden; }
   body {
     background: linear-gradient(135deg, #667eea, #764ba2);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 0;
-    font-size: 14px;
+    display: flex; justify-content: center; align-items: center;
+    font-size: 15px;
   }
 
-  /* Phone frame — Android app jaisa */
   .app {
     width: 100%;
-    max-width: 420px;
+    max-width: 430px;
     height: 100vh;
-    max-height: 860px;
+    max-height: 880px;
     background: #f5f7fb;
     display: flex;
     flex-direction: column;
     overflow: hidden;
     position: relative;
-    border-radius: 0;
   }
   @media (min-width: 480px) {
     .app { border-radius: 28px; box-shadow: 0 30px 80px rgba(0,0,0,0.4); }
@@ -43,48 +35,53 @@
     background: linear-gradient(135deg, #667eea, #764ba2);
     color: white;
     padding: 18px 20px;
-    display: flex;
-    align-items: center;
-    gap: 12px;
+    display: flex; align-items: center; gap: 12px;
     box-shadow: 0 2px 10px rgba(0,0,0,0.1);
     z-index: 10;
   }
   .appbar .logo {
-    width: 36px; height: 36px;
+    width: 40px; height: 40px;
     background: rgba(255,255,255,0.2);
-    border-radius: 10px;
+    border-radius: 12px;
     display: flex; align-items: center; justify-content: center;
-    font-size: 20px;
+    font-size: 22px;
   }
-  .appbar h1 { font-size: 17px; font-weight: 600; }
-  .appbar p { font-size: 11px; opacity: 0.85; }
+  .appbar h1 { font-size: 18px; font-weight: 600; }
+  .appbar p { font-size: 12px; opacity: 0.9; margin-top: 2px; }
 
-  /* Content scroll area */
+  /* Content */
   .content {
     flex: 1;
     overflow-y: auto;
-    padding: 18px 16px 100px;
+    padding: 20px 18px 100px;
     -webkit-overflow-scrolling: touch;
   }
 
   .card {
     background: white;
-    border-radius: 16px;
-    padding: 20px;
+    border-radius: 18px;
+    padding: 24px 22px;
     box-shadow: 0 2px 12px rgba(0,0,0,0.06);
-    margin-bottom: 16px;
+    margin-bottom: 18px;
   }
 
-  .card h2 { color: #333; margin-bottom: 16px; font-size: 16px; font-weight: 600; }
+  .card h2 { color: #333; margin-bottom: 20px; font-size: 17px; font-weight: 600; }
 
-  label { display: block; color: #555; margin-bottom: 6px; font-size: 13px; font-weight: 600; }
+  label {
+    display: block;
+    color: #444;
+    margin-bottom: 8px;
+    font-size: 14px;
+    font-weight: 600;
+  }
+
   input, select {
     width: 100%;
-    padding: 12px 14px;
+    padding: 14px 16px;
     border: 1.5px solid #e0e0e0;
-    border-radius: 10px;
+    border-radius: 12px;
     font-size: 15px;
-    margin-bottom: 14px;
+    margin-bottom: 18px;
     outline: none;
     transition: 0.2s;
     background: #fafbff;
@@ -99,95 +96,123 @@
   select {
     background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23667eea' stroke-width='2'%3e%3cpolyline points='6 9 12 15 18 9'/%3e%3c/svg%3e");
     background-repeat: no-repeat;
-    background-position: right 12px center;
-    background-size: 16px;
-    padding-right: 36px;
+    background-position: right 14px center;
+    background-size: 18px;
+    padding-right: 42px;
   }
 
-  .row { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+  .row { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+  .row > div input, .row > div select { margin-bottom: 18px; }
 
+  /* ✅ CONSENT BOX — BADA aur CLEAR */
   .consent-box {
     background: #fff8e1;
-    border-left: 3px solid #ffc107;
-    padding: 12px;
-    border-radius: 10px;
-    margin-bottom: 16px;
+    border-left: 5px solid #ffc107;
+    padding: 18px 18px;
+    border-radius: 14px;
+    margin-bottom: 22px;
+    margin-top: 4px;
   }
   .consent-box label {
-    display: flex; align-items: flex-start; gap: 10px;
-    color: #555; font-weight: 500; cursor: pointer; font-size: 12px;
-    margin: 0; line-height: 1.4;
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    color: #4a4a4a;
+    font-weight: 500;
+    cursor: pointer;
+    font-size: 14px;
+    line-height: 1.6;
+    margin: 0;
   }
   .consent-box input[type="checkbox"] {
-    width: auto; margin: 2px 0 0 0;
-    transform: scale(1.3); cursor: pointer;
-    accent-color: #667eea;
+    width: 22px;
+    height: 22px;
+    margin: 2px 0 0 0;
+    cursor: pointer;
+    accent-color: #ff9800;
     flex-shrink: 0;
   }
 
   .btn {
-    width: 100%; padding: 14px;
+    width: 100%;
+    padding: 16px;
     background: linear-gradient(135deg, #667eea, #764ba2);
-    color: white; border: none; border-radius: 12px;
-    font-size: 15px; font-weight: 600;
-    cursor: pointer; transition: 0.2s;
-    box-shadow: 0 4px 12px rgba(102,126,234,0.3);
+    color: white;
+    border: none;
+    border-radius: 12px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.2s;
+    box-shadow: 0 4px 14px rgba(102,126,234,0.35);
   }
   .btn:active { transform: scale(0.98); }
   .btn-danger { background: #e74c3c; box-shadow: 0 4px 12px rgba(231,76,60,0.3); }
   .btn-success { background: #28a745; box-shadow: 0 4px 12px rgba(40,167,69,0.3); }
-  .btn-small { padding: 8px 14px; font-size: 13px; width: auto; }
+  .btn-small { padding: 10px 14px; font-size: 13.5px; width: auto; }
 
-  .search-box { display: flex; gap: 8px; margin-bottom: 14px; }
+  .search-box { display: flex; gap: 10px; margin-bottom: 16px; }
   .search-box input { margin-bottom: 0; flex: 1; }
   .search-box button {
-    padding: 0 18px; background: #667eea; color: white;
-    border: none; border-radius: 10px; cursor: pointer; font-weight: 600;
+    padding: 0 20px;
+    background: #667eea;
+    color: white;
+    border: none;
+    border-radius: 12px;
+    cursor: pointer;
+    font-weight: 600;
+    font-size: 14px;
   }
 
   .person-card {
     background: #f8f9ff;
-    border-left: 3px solid #667eea;
-    padding: 14px;
-    border-radius: 10px;
-    margin-bottom: 10px;
+    border-left: 4px solid #667eea;
+    padding: 16px;
+    border-radius: 12px;
+    margin-bottom: 12px;
     position: relative;
     animation: fadeIn 0.3s;
   }
-  .person-card h3 { color: #333; margin-bottom: 8px; font-size: 15px; padding-right: 60px; }
-  .person-card p { color: #555; font-size: 12.5px; margin: 4px 0; line-height: 1.4; }
+  .person-card h3 { color: #333; margin-bottom: 10px; font-size: 16px; padding-right: 55px; }
+  .person-card p { color: #555; font-size: 13.5px; margin: 6px 0; line-height: 1.5; }
   .person-card p strong { color: #333; }
-  .person-card a { color: #667eea; text-decoration: none; }
+  .person-card a { color: #667eea; text-decoration: none; font-weight: 500; }
   .delete-btn {
-    position: absolute; top: 10px; right: 10px;
-    background: #ffe5e5; color: #e74c3c; border: none;
-    padding: 5px 10px; border-radius: 6px;
-    cursor: pointer; font-size: 11px; font-weight: 600;
+    position: absolute; top: 12px; right: 12px;
+    background: #ffe5e5; color: #e74c3c;
+    border: none; padding: 6px 12px;
+    border-radius: 8px; cursor: pointer;
+    font-size: 12px; font-weight: 600;
   }
 
   .msg {
-    padding: 12px; border-radius: 10px;
-    margin-top: 14px; font-size: 13px;
-    display: none; text-align: center; font-weight: 600;
+    padding: 14px;
+    border-radius: 12px;
+    margin-top: 16px;
+    font-size: 14px;
+    display: none;
+    text-align: center;
+    font-weight: 600;
+    line-height: 1.5;
   }
   .msg.success { background: #d4edda; color: #155724; display: block; }
   .msg.error { background: #f8d7da; color: #721c24; display: block; }
 
-  .empty { text-align: center; color: #999; padding: 30px 20px; font-size: 13px; }
+  .empty { text-align: center; color: #999; padding: 40px 20px; font-size: 14px; }
   .stats {
     background: linear-gradient(135deg, #667eea, #764ba2);
-    color: white; padding: 16px; border-radius: 12px;
-    margin-bottom: 14px; text-align: center; font-weight: 600; font-size: 14px;
+    color: white; padding: 18px;
+    border-radius: 14px; margin-bottom: 16px;
+    text-align: center; font-weight: 600; font-size: 15px;
   }
 
   .section { display: none; }
   .section.active { display: block; animation: fadeIn 0.3s; }
   @keyframes fadeIn { from { opacity: 0; transform: translateY(8px); } to { opacity: 1; transform: translateY(0); } }
 
-  /* Bottom Navigation — Android app style */
+  /* Bottom nav */
   .bottom-nav {
-    position: absolute;
-    bottom: 0; left: 0; right: 0;
+    position: absolute; bottom: 0; left: 0; right: 0;
     background: white;
     display: flex;
     box-shadow: 0 -2px 12px rgba(0,0,0,0.08);
@@ -196,43 +221,33 @@
   }
   .nav-item {
     flex: 1;
-    padding: 10px 0 12px;
+    padding: 12px 0 14px;
     background: none; border: none;
     display: flex; flex-direction: column;
-    align-items: center; gap: 3px;
+    align-items: center; gap: 4px;
     cursor: pointer; color: #999;
-    font-size: 10.5px; font-weight: 600;
+    font-size: 11.5px; font-weight: 600;
     transition: 0.2s;
   }
-  .nav-item .icon { font-size: 20px; }
+  .nav-item .icon { font-size: 22px; }
   .nav-item.active { color: #667eea; }
   .nav-item.active .icon { transform: scale(1.1); }
 
-  /* Hide password eye */
+  /* Password eye */
   .pass-wrapper { position: relative; }
-  .pass-wrapper input { padding-right: 44px; margin-bottom: 14px; }
+  .pass-wrapper input { padding-right: 48px; }
   .eye-btn {
-    position: absolute; right: 12px; top: 50%;
+    position: absolute; right: 14px; top: 50%;
     transform: translateY(-50%);
     background: none; border: none;
-    cursor: pointer; font-size: 18px;
+    cursor: pointer; font-size: 20px;
     color: #999; padding: 4px;
-    margin-top: -7px;
+    margin-top: -9px;
   }
-
-  /* Loading */
-  .loader {
-    display: inline-block; width: 14px; height: 14px;
-    border: 2px solid #fff; border-top-color: transparent;
-    border-radius: 50%; animation: spin 0.6s linear infinite;
-    vertical-align: middle; margin-right: 6px;
-  }
-  @keyframes spin { to { transform: rotate(360deg); } }
 </style>
 </head>
 <body>
   <div class="app">
-    <!-- App Bar -->
     <div class="appbar">
       <div class="logo">🚀</div>
       <div>
@@ -241,9 +256,8 @@
       </div>
     </div>
 
-    <!-- Content -->
     <div class="content">
-      <!-- JOIN FORM -->
+      <!-- JOIN -->
       <div class="section active" id="joinSection">
         <div class="card">
           <h2>📝 Apni details bharein</h2>
@@ -293,6 +307,7 @@
           <label>Email *</label>
           <input type="email" id="jEmail" placeholder="aapka@email.com" inputmode="email" autocomplete="email">
 
+          <!-- ✅ BADA CONSENT BOX -->
           <div class="consent-box">
             <label>
               <input type="checkbox" id="jConsent">
@@ -307,7 +322,6 @@
 
       <!-- ADMIN -->
       <div class="section" id="adminSection">
-        <!-- Login -->
         <div id="adminLogin">
           <div class="card">
             <h2>🔐 Admin Login</h2>
@@ -321,7 +335,6 @@
           </div>
         </div>
 
-        <!-- Panel -->
         <div id="adminPanel" style="display:none;">
           <div class="stats" id="stats">Total: 0 Joiners</div>
 
@@ -330,7 +343,7 @@
             <button onclick="renderList()">Go</button>
           </div>
 
-          <div style="display:flex;gap:8px;margin-bottom:14px;">
+          <div style="display:flex;gap:10px;margin-bottom:16px;">
             <button class="btn btn-success btn-small" style="flex:1;" onclick="exportCSV()">📥 CSV</button>
             <button class="btn btn-danger btn-small" style="flex:1;" onclick="logout()">🚪 Logout</button>
           </div>
@@ -340,7 +353,6 @@
       </div>
     </div>
 
-    <!-- Bottom Nav -->
     <div class="bottom-nav">
       <button class="nav-item active" id="navJoin" onclick="showTab('join')">
         <span class="icon">📝</span>
@@ -355,13 +367,10 @@
 
 <script>
   // ============================================
-  // PASSWORD PROTECTION — Obfuscated (hidden)
+  // PASSWORD — hidden (766743@sr)
   // ============================================
-  // Actual password: 766743@sr
-  // Ye encoded form mein hai, koi source dekh kar bhi nahi padh sakta
-  const _k = [55,54,54,55,52,51,64,115,114]; // char codes
-  const _x = [2,3,1,2,1,5,0,8,7]; // XOR keys
-
+  const _k = [55,54,54,55,52,51,64,115,114];
+  const _x = [2,3,1,2,1,5,0,8,7];
   function _verify(input) {
     if (input.length !== _k.length) return false;
     for (let i = 0; i < _k.length; i++) {
@@ -370,9 +379,6 @@
     return true;
   }
 
-  // ============================================
-  // DATA STORAGE
-  // ============================================
   function getPeople() {
     try { return JSON.parse(localStorage.getItem('joiners_secure') || '[]'); }
     catch { return []; }
@@ -381,13 +387,9 @@
     localStorage.setItem('joiners_secure', JSON.stringify(p));
   }
 
-  // ============================================
-  // NAVIGATION
-  // ============================================
   function showTab(name) {
     document.querySelectorAll('.section').forEach(s => s.classList.remove('active'));
     document.querySelectorAll('.nav-item').forEach(n => n.classList.remove('active'));
-
     if (name === 'join') {
       document.getElementById('joinSection').classList.add('active');
       document.getElementById('navJoin').classList.add('active');
@@ -398,9 +400,6 @@
     document.querySelector('.content').scrollTop = 0;
   }
 
-  // ============================================
-  // JOIN FORM
-  // ============================================
   function submitJoin() {
     const name = document.getElementById('jName').value.trim();
     const age = document.getElementById('jAge').value.trim();
@@ -447,13 +446,9 @@
     setTimeout(() => msg.className = 'msg', 4000);
   }
 
-  // ============================================
-  // ADMIN LOGIN
-  // ============================================
   function adminLogin() {
     const pass = document.getElementById('adminPass').value;
     const msg = document.getElementById('loginMsg');
-
     if (_verify(pass)) {
       document.getElementById('adminLogin').style.display = 'none';
       document.getElementById('adminPanel').style.display = 'block';
@@ -481,9 +476,6 @@
     else { inp.type = 'password'; icon.textContent = '👁️'; }
   }
 
-  // ============================================
-  // LIST RENDER
-  // ============================================
   function renderList() {
     const query = (document.getElementById('adminSearch')?.value || '').toLowerCase();
     const people = getPeople();
@@ -508,7 +500,7 @@
         <p><strong>State:</strong> ${escapeHtml(p.state)}</p>
         <p><strong>WhatsApp:</strong> <a href="https://wa.me/${p.whatsapp.replace(/\D/g,'')}" target="_blank">${escapeHtml(p.whatsapp)}</a></p>
         <p><strong>Email:</strong> ${escapeHtml(p.email)}</p>
-        <p style="font-size:11px;color:#999;margin-top:6px;">📅 ${p.date}</p>
+        <p style="font-size:12px;color:#999;margin-top:8px;">📅 ${p.date}</p>
       </div>
     `).join('');
   }
