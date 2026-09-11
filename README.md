@@ -30,7 +30,6 @@
     .app { border-radius: 28px; box-shadow: 0 30px 80px rgba(0,0,0,0.4); }
   }
 
-  /* App bar */
   .appbar {
     background: linear-gradient(135deg, #667eea, #764ba2);
     color: white;
@@ -49,7 +48,6 @@
   .appbar h1 { font-size: 18px; font-weight: 600; }
   .appbar p { font-size: 12px; opacity: 0.9; margin-top: 2px; }
 
-  /* Content */
   .content {
     flex: 1;
     overflow-y: auto;
@@ -102,9 +100,7 @@
   }
 
   .row { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
-  .row > div input, .row > div select { margin-bottom: 18px; }
 
-  /* ✅ CONSENT BOX — BADA aur CLEAR */
   .consent-box {
     background: #fff8e1;
     border-left: 5px solid #ffc107;
@@ -210,7 +206,6 @@
   .section.active { display: block; animation: fadeIn 0.3s; }
   @keyframes fadeIn { from { opacity: 0; transform: translateY(8px); } to { opacity: 1; transform: translateY(0); } }
 
-  /* Bottom nav */
   .bottom-nav {
     position: absolute; bottom: 0; left: 0; right: 0;
     background: white;
@@ -233,7 +228,6 @@
   .nav-item.active { color: #667eea; }
   .nav-item.active .icon { transform: scale(1.1); }
 
-  /* Password eye */
   .pass-wrapper { position: relative; }
   .pass-wrapper input { padding-right: 48px; }
   .eye-btn {
@@ -307,7 +301,6 @@
           <label>Email *</label>
           <input type="email" id="jEmail" placeholder="aapka@email.com" inputmode="email" autocomplete="email">
 
-          <!-- ✅ BADA CONSENT BOX -->
           <div class="consent-box">
             <label>
               <input type="checkbox" id="jConsent">
@@ -367,14 +360,14 @@
 
 <script>
   // ============================================
-  // PASSWORD — hidden (766743@sr)
+  // PASSWORD VERIFY — actual password: 766743@sr
+  // Char codes: 7=55, 6=54, 6=54, 7=55, 4=52, 3=51, @=64, s=115, r=114
   // ============================================
-  const _k = [55,54,54,55,52,51,64,115,114];
-  const _x = [2,3,1,2,1,5,0,8,7];
   function _verify(input) {
-    if (input.length !== _k.length) return false;
-    for (let i = 0; i < _k.length; i++) {
-      if ((input.charCodeAt(i) ^ _x[i]) !== _k[i]) return false;
+    const _p = [55, 54, 54, 55, 52, 51, 64, 115, 114];
+    if (input.length !== _p.length) return false;
+    for (let i = 0; i < _p.length; i++) {
+      if (input.charCodeAt(i) !== _p[i]) return false;
     }
     return true;
   }
