@@ -5,7 +5,7 @@
 <meta name="theme-color" content="#667eea">
 <meta name="mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-capable" content="yes">
-<title>Join Team</title>
+<title>Join SITANSHU Team</title>
 <style>
   * { margin: 0; padding: 0; box-sizing: border-box; font-family: -apple-system, 'Segoe UI', Roboto, sans-serif; -webkit-tap-highlight-color: transparent; }
   html, body { height: 100%; overflow-x: hidden; }
