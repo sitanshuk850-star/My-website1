@@ -5,7 +5,7 @@
 <meta name="theme-color" content="#667eea">
 <meta name="mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-capable" content="yes">
-<title>Join SITANSHU Team</title>
+<title>Join Team</title>
 <style>
   * { margin: 0; padding: 0; box-sizing: border-box; font-family: -apple-system, 'Segoe UI', Roboto, sans-serif; -webkit-tap-highlight-color: transparent; }
   html, body { height: 100%; overflow-x: hidden; }
@@ -245,7 +245,7 @@
     <div class="appbar">
       <div class="logo">🚀</div>
       <div>
-        <h1>Join Our Team</h1>
+        <h1>Join SITANSHU Team</h1>
         <p>Fill the form & we'll connect</p>
       </div>
     </div>
